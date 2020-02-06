@@ -1,0 +1,164 @@
+\documentclass{ximera}
+\title{Cut and paste test}
+Concept Problem
+Suppose you have a 15-gallon container filled with maple syrup. As part of an experiment on fluid dynamics, you poke a hole in the bottom and observe how the syrup flows out. You notice that it takes 45 minutes for the container to drain completely. Let $t$ represent the number of minutes that passed after you poked the hole and $S(t)$ represent the number of gallons of syrup remaining in the container. What values does t take in this scenario? What values does S take?
+
+Guidance
+In the last section we saw that a function can be thought of as a machine that takes input values and produces output values. It is often useful to talk about those sets of inputs and outputs separately.
+
+The domain of a function (or relation) is the set of all possible input values that the function can take. The range of a function (or relation) is the set of possible output values that the function can produce. We may write the domain and range of a relation in several different ways, including inequality notation, interval notation, set-builder notation, or set notation. Remember:
+
+$\mathbb{Z}$(integers)=${...−3,−2,−1,0,1,2,3,…}$
+$\mathbb{R}$(real numbers)=${all rational and irrational numbers}$.
+These number systems are very important when the domain and range of a relation are described using interval notation.
+
+A relation is said to be discrete if there are a finite number of data points on its graph. A discrete relation may be expressed as a table of values or a list of points. Graphs of discrete relations appear as dots. A relation is said to be continuous if its graph is an unbroken curve with no "holes" or "gaps." A continuous relation may be expressed as an equation or graph. The graph of a continuous relation is represented by a line or a curve like the one below. Note that it is possible for a relation to be neither discrete nor continuous.
+
+On a graph, inputs correspond to the horizontal axis, and outputs correspond to the vertical axis, so to find the domain and range we look at the horizontal and vertical separately.
+
+ 
+
+The relation is a straight line that that begins at the point (2,1). Horizontally, the graph starts where x=2 and then goes to the right indefinitely. Vertically, the graph starts where y=1 and then goes up indefinitely. The domain and the range can be written in set-builder notation, as shown below:
+
+ 
+
+That's a lot of writing! When it is clear that we are working within the real numbers, we will drop the full set-builder notation and only state the inequality. So for the example above we would say the domain is x≥2 and the range is y≥1. In situations where every real number is a valid input/output, we say the the domain/range is "all real numbers".
+
+Example A
+Which relations are discrete? Which relations are continuous? For each relation, find the domain and range.
+
+(i)   
+
+(ii)   
+
+(iii)   
+
+(iv)   
+
+Solution:
+
+(i) The graph appears as dots. Therefore, the relation is discrete. The domain is {1,2,4}. The range is {1,2,3,5}
+
+(ii) The graph appears as a continuous straight line. It extends indefinitely to the left and right, so the domain is all real numbers. It also extends indefinitely up and down, so the range is all real numbers.
+
+(iii) The graph appears as dots. Therefore, the relation is discrete. The domain is {−1,0,1,2,3,4,5}. The range is {−2,−1,0,1,2,3,4}
+
+(iv) The graph appears as a continuous curve. Horizontally it extends to both the left and right indefinitely, so its domain is all real numbers. Vertically, however, the graph extends upwards indefinitely, but never goes below the value -3, so its range is y≥−3 
+
+Example B
+Can you state the domain and the range of the following relation?
+
+ 
+
+Solution:
+
+The points indicated on the graph are {(−5,−4),(−5,1),(−2,3),(2,1),(2,−4)}
+
+The domain is {−5,−2,2} and the range is {−4,1,3}.
+
+Concept Problem Revisited
+In the syrup example, we defined the function S(t) which represented the number of gallons of syrup remaining in the container after t minutes of draining.
+
+What values are valid for input variable t? The smallest value that makes sense for t is  (corresponding to the moment the hole was created). We stopped counting time after the container was empty, so the largest value of t that makes sense is 45. Putting these together we can say that the domain of S(t) is 0≤t≤45.
+
+What values are valid for the output variable S? The container started out full, so the largest value of S that makes sense is 15 (the capacity of the container). On the other hand, the smallest value of S that makes sense is  (when the container was empty). Putting these together we can say that the range of S(t) is 0≤S≤15.
+
+Guided Practice
+1. Which relation is discrete? Which relation is continuous?
+
+(i)  
+
+
+ 
+(ii)  
+
+
+ 
+2. State the domain and the range for each of the following relations:
+
+(i)  
+
+
+ 
+(ii)  
+
+
+ 
+3. A computer salesman’s wage consists of a monthly salary of $200 plus a bonus of $100 for each computer sold.
+
+(a) Complete the following table of values:
+# computers sold	0	2	5	10	18
+Wages for month ($)	 ?	?	?	?	?
+(b) Sketch the graph to represent the monthly salary ($), against the number (N), of computers sold.
+(c) Use the graph to write a suitable domain and range for the problem.
+Answers:
+
+1. (i) The graph clearly shows that the points are joined. Therefore the data is continuous.
+
+(ii) The graph shows the plotted points as dots that are not joined. Therefore the data is discrete.
+2. (i) The graph starts on the left at x=−3 and extends continuously to the right until x=3, so the domain is −3≤x≤3. Vertically, the lowest point on the graph is at y=−3 and it extends upwards continuously to y=3, so the range is −3≤y≤3.
+
+(ii) The domain is all real numbers. The range is −4≤y≤4.
+3.
+
+# computers sold	0	2	5	10	18
+Wages for month ($)	$200	$400	$700	$1200	$2000
+ 
+
+(c) The graph shows that the data is discrete. (The salesman can't sell a portion of a computer, so the data points can't be connected.) The number of computers sold and must be whole numbers. The wages must be natural numbers.
+A suitable domain is {0,1,2,3,4,...}
+A suitable range is {200,300,400,500,...}
+Practice Problems
+Use the graph below for #1 and #2.
+
+ 
+
+Is the relation discrete, continuous, or neither?
+Find the domain and range for the relation.
+Use the graph below for #3 and #4.
+
+ 
+
+Is the relation discrete, continuous, or neither?
+Find the domain and range for each of the three relations.
+Use the graph below for #5 and #6.
+
+ 
+
+Is the relation discrete, continuous, or neither?
+Find the domain and range for the relation.
+Use the graph below for #7 and #8.
+
+ 
+
+Is the relation discrete, continuous, or neither?
+Find the domain and range for the relation.
+Examine the following pattern.
+
+ 
+
+Number of Cubes (n)	1	2	3	4	5	...	n	...	200
+Number of visible faces (f)	6	10	14	 	 	 	 	 	 
+Complete the table below the pattern.
+Is the relation discrete, continuous, or neither?
+Write a suitable domain and range for the pattern.
+Examine the following pattern.
+
+ 
+
+Number of triangles (n)	1	2	3	4	5	...	n	...	100
+Number of toothpicks (t)	 	 	 	 	 	 	 	 	 
+Complete the table below the pattern.
+Is the relation discrete, continuous, or neither?
+Write a suitable domain and range for the pattern.
+Examine the following pattern.
+
+ 
+
+Pattern Number (n)	1	2	3	4	5	...	n	...	100
+Number of dots (d)	 	 	 	 	 	 	 	 	 
+Complete the table below the pattern.
+Is the relation discrete, continuous, or neither?
+Write a suitable domain and range for the pattern.
+
+\end{document}
