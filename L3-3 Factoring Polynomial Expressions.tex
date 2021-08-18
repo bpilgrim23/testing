@@ -1,0 +1,142 @@
+\documentclass{ximera} 
+\usepackage[letterpaper, margin=.5in]{geometry}
+\usetikzlibrary{math}
+%----------------------------------------------------------------------------------------
+%Lecture 3-3 - Factoring Polynomials
+%----------------------------------------------------------------------------------------
+\begin{document}
+\section{Factoring Polynomial Expressions}
+\emph{Factoring} is the process of breaking a quantity down using multiplication. We can factor $35$ into $7 \cdot 5$. We can also do this with polynomials. For instance, $x^{2}+5x+6$ factors into $(x+2)\cdot (x+3)$. \footnote{You can check this by FOILing out $(x+2)\cdot (x+3)$} But how do we go from $x^{2}+5x+6$ to $(x+2)\cdot (x+3)$? There are several techniques that can we can use to factor different kinds of polynomials.
+\subsection{Factoring a common factor}
+Recall the distributive property we used for adding and multiplying polynomials:
+\begin{center} $a(b+c)=ab+ac$\end{center}
+\tikzmath{int \a,\c,\ac;\a=7;\c=5;\ac=\a*\c;}
+We noted that it also works in reverse and saw that $\a xy-\ac y=\a y(x-\c)$. In this case $\a y$ is a term that divides both $\a xy$ and $\ac y$ that we can \emph{factor out} (or pull out) from the expression.
+\begin{definition}
+	A \underline{common factor} of two terms is an expression that is a factor of each of the terms
+\end{definition}
+When factoring, we usually want to pull out as much as we can. The biggest\footnote{What do we mean by 'biggest' here? We mean that any other common factor also divides the greatest common factor} term that can be pulled out of an expression is called the \emph{greatest common factor} or GCF. Identifying the GCF is the first step of factoring a polynomial.
+\begin{example}
+	\tikzmath{
+	int \c,\n;
+	\n1=4; \n2=6; \n3=7;
+	\c1=16; \c2=4; \c3=8;
+	}
+	Identify the GCF of the expression: $\c3 x^{\n3}-\c2 x^{\n2}+\c1 x^{\n1}$\\ \\
+	Solution: The GCF here is $\c2 x^{\n1}$.\\
+	If there we added one more $x$ then it would not be a factor of $\c1 x^{\n1}$. Similarly, if the coefficient was any larger it would no longer be a factor of $\c2 x^{\n2}$.
+\end{example}
+\begin{example}
+	\tikzmath{
+		int \c,\n,\fac;
+		\n1=2; \n2=9; \n3=4;
+		\c1=12; \c2=30; \c3=42;
+		\fac = 6;
+	}
+	Identify the GCF of the expression: $\c3 x^{\n2}+\c1 x^{\n1}-\c2 x^{\n3}$\\ \\
+	Solution: The GCF here is $\fac x^{\n1}$.\\
+	If there we added one more $x$ then it would not be a factor of $\c1 x^{\n1}$. For the coefficient, we can see that $\fac$ is the largest number that evenly divides $\c1,\c2, \text{ and } \c3$
+\end{example}
+Once we have identified the GCF, how do we factor it out? After we pull out the GCF the result will look like
+\begin{center} $GCF\cdot (\text{leftovers})$\end{center}
+To determine the content of 'leftovers', divide each term of the original expression by the GCF.
+\begin{example}
+	\tikzmath{
+	int \n,\a,\b,\ab,\bsq,\p;
+	\a = 7; \b = 5; \n1 = 3;
+	\n2 = \n1+2; \n5 = \n1+5;
+	\ab1 = \a*\b; \ab2 = \a*\b^2;
+	\bsq = \b^2; \p = \n5-\n1;
+	}
+Factor out the GCF: $\a n^{\n5}+\ab1 n^{\n1}$\\ \\
+Solution: First, determine the GCF: $\a n^{\n1}$\\ \\
+Next, factor the GCF out:
+\begin{subequations}
+\begin{align}
+	\a n^{\n5}+\ab1 n^{\n1}&\\
+	&=\a n^{\n1}\left( \frac{\a n^{\n5}}{\a n^{\n1}}+\frac{\ab1 n^{\n1}}{\a n^{\n1}}\right)\\
+	&=\a n^{\n1}\left(n^{\p}+\b \right)
+\end{align}
+\end{subequations}
+\end{example}
+\begin{example}
+	\tikzmath{
+		int \n,\a,\b,\ab,\bsq,\p;
+		\a = 11; \b = 3; \n1 = 6;
+		\n2 = \n1+3; \n3 = \n1+5;
+		\ab1 = \a*\b; \ab2 = \a*\b^2;
+		\bsq = \b^2; \p1 = \n3-\n1;
+		\p2 = \n2-\n1;
+	}
+	Factor out the GCF: $\ab2 n^{\n3}+\ab1 n^{\n1}-\a n^{\n2}$\\ \\
+	Solution: First, determine the GCF: $\a n^{\n1}$\\ \\
+	Next, factor the GCF out:
+	\begin{subequations}
+	\begin{align}
+		\ab2 n^{\n3}+\ab1 n^{\n1}-\a n^{\n2}&\\
+		&=\a n^{\n1}\left(\frac{\ab2 n^{\n3}}{\a n^{\n1}}+\frac{\ab1 n^{\n1}}{\a n^{\n1}}-\frac{\a n^{\n2}}{\a n^{\n1}}\right)\\
+		&=\a n^{\n1}\left(\bsq n^{\p1}+\b - n^{\p2}\right)
+	\end{align}
+	\end{subequations}
+\end{example}
+\subsection{Factoring By Grouping}
+A common factor does not always have to be a monomial. It can be a more complex expression, too. Consider the expression
+\begin{center}$3x^{2}k+7xk$\end{center}
+We can see that $k$ is a common factor. Pulling it out gives us
+\begin{center}$3x^{2}k+7xk=k\left(3x^{2}+7x\right)$\end{center}
+If we replace $k$ with $(x+4)$ the factoring process still works:
+\begin{center}$3x^{2}\underbrace{(x+4)}_{k}+7x\underbrace{(x+4)}_{k}=\underbrace{(x+4)}_{k}\left(3x^{2}+7x\right)$\end{center}
+Now suppose we want to factor the expression
+\begin{center}$y^{3}+8y^{2}+5y+40$\end{center}
+This one seems tough, because there is no common factor across all four terms. Instead, let's think smaller and just factor the left and right halves separately
+\begin{center}$\underbrace{y^{3}+8y^{2}}_{\text{factor}}+\underbrace{5y+40}_{\text{factor}}$\end{center}
+We can factor $y^{2}$ from the left part and $5$ from the right
+\begin{center}$y^{3}+8y^{2}+5y+40=y^{2}(y+8)+5(y+8)$\end{center}
+Ah ha! Now we can see a new common factor $(y+8)$ that we can pull out
+\begin{center}$y^{2}(y+8)+5(y+8)=(y+8)(y^{2}+5)$\end{center}
+This kind of factoring is called \emph{factoring by grouping}, and it can be helpful for breaking down longer polynomials\\
+To factor by grouping, a polynomial needs to have an even number of terms (so that its left and right halves are the same size). The process is
+\begin{itemize}
+	\item Factor the left and right halves separately
+	\item Look for a new common factor in the expressions in parentheses
+\end{itemize}
+\begin{example}
+	\tikzmath{
+	int \a,\b,\c,\ac,\bc,\n;
+	\a=9; \b=4; \c=7;
+	\n1=4; \n2=3; 
+	\bc = \c*\b; \ac = \a*\c;
+	\n3 = \n1+\n2;
+	}
+Factor completely: $\a x^{\n3}+ \ac x^{\n1}+\b x^{\n2}+\bc$\\ \\
+Solution:
+\begin{subequations}
+\begin{align}
+	\a x^{\n3}+ \ac x^{\n1}+\b x^{\n2}+\bc&\\
+	&=\left(\a x^{\n3}+ \ac x^{\n1}\right)+\left(\b x^{\n2}+\bc\right)\\
+	&=\a x^{\n1}\left(x^{\n2}+\c \right)+\b \left(x^{\n2}+\c \right)\\
+	&=\left(x^{\n2}+\c \right)\left(\a x^{\n1}+\b\right)
+\end{align}
+\end{subequations}
+\end{example}
+\begin{example}
+	\tikzmath{
+		int \a,\b,\c,\ac,\bc,\n;
+		\a=3; \b=-11; \c=-5;
+		\n1=2; \n2=1; 
+		\bc = \c*\b; \ac = \a*\c;
+		\n3 = \n1+\n2;
+	}
+Factor completely: $\a x^{\n3}  \ac x^{\n1} \b x+\bc$\\ \\
+Solution:
+\begin{subequations}
+\begin{align}
+	\a x^{\n3}  \ac x^{\n1} \b x+\bc&\\
+	&=\left(\a x^{\n3}  \ac x^{\n1}\right)+\left( \b x+\bc\right)\\
+	&=\a x^{\n1}\left(x \c \right) \b \left(x \c \right)\label{negfac}\\
+	&=\left(x \c \right)\left(\a x^{\n1} \b\right)
+\end{align}
+\end{subequations}
+\end{example}
+Notice that when the right half begins when a negative sign we factor it out as well, as in step \ref{negfac}.
+\end{document}
